@@ -1,0 +1,48 @@
+{
+  "name": "n8n-nodes-apicheck",
+  "version": "1.0.0",
+  "description": "n8n integration for ApiCheck - address validation, search, and verification",
+  "keywords": ["n8n-community-package", "n8n", "apicheck", "address", "validation", "email", "phone"],
+  "license": "MIT",
+  "homepage": "https://apicheck.nl",
+  "author": {
+    "name": "ApiCheck",
+    "email": "support@apicheck.nl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/api-check/n8n-nodes-apicheck"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint nodes credentials"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.7.0",
+    "n8n-core": "^1.14.0",
+    "n8n-workflow": "^1.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "n8n-core": "^1.14.0",
+    "n8n-workflow": "^1.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/ApiCheckCredentials.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/ApiCheck/ApiCheck.node.js"
+    ]
+  }
+}
